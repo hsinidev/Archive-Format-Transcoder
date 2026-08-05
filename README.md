@@ -1,6 +1,5 @@
-# Archive Format Transcoder (ID: `010`)
+# Archive Format Transcoder
 
-[![Project ID](https://img.shields.io/badge/Project%20ID-010-blue.svg)](https://github.com/hsinidev/010-Archive-Format-Transcoder)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Developer](https://img.shields.io/badge/Developer-Hsini%20Mohamed-green.svg)](https://hsini.dev)
 
