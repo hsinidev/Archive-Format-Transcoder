@@ -4,7 +4,7 @@
 [![Developer](https://img.shields.io/badge/Developer-Hsini%20Mohamed-green.svg)](https://hsini.dev)
 
 > **Project ID**: `010`  
-> **Repository**: [https://github.com/hsinidev/010-Archive-Format-Transcoder](https://github.com/hsinidev/010-Archive-Format-Transcoder)
+> **Repository**: [https://github.com/hsinidev/Archive-Format-Transcoder](https://github.com/hsinidev/Archive-Format-Transcoder)
 
 ---
 
@@ -38,10 +38,10 @@ Archive Format Transcoder converts compressed archive files across formats (ZIP,
 ### Setup Instructions
 ```bash
 # 1. Clone the repository
-git clone https://github.com/hsinidev/010-Archive-Format-Transcoder.git
+git clone https://github.com/hsinidev/Archive-Format-Transcoder.git
 
 # 2. Navigate to project directory
-cd 010-Archive-Format-Transcoder
+cd Archive-Format-Transcoder
 
 # 3. Install required dependencies
 pip install -r requirements.txt
@@ -59,7 +59,7 @@ python app.py
 - **Website**: [https://hsini.dev](https://hsini.dev)
 - **Email**: [contact@hsini.dev](mailto:contact@hsini.dev)
 - **GitHub Profile**: [https://github.com/hsinidev](https://github.com/hsinidev)
-- **Project Repo**: [https://github.com/hsinidev/010-Archive-Format-Transcoder](https://github.com/hsinidev/010-Archive-Format-Transcoder)
+- **Project Repo**: [https://github.com/hsinidev/Archive-Format-Transcoder](https://github.com/hsinidev/Archive-Format-Transcoder)
 
 ---
 
