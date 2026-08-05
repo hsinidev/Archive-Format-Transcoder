@@ -1,0 +1,99 @@
+{
+  "project_id": 10,
+  "title": "Archive Transcoder Pro (ZIP / 7Z / RAR / TAR)",
+  "folder_name": "010-Archive-Format-Transcoder",
+  "category": "Compression & Data Systems Core",
+  "target_os": "Windows 10 / Windows 11 (x64 Native Executable / PyInstaller .exe)",
+  "version": "1.0.0-PROD",
+  "overview": "A high-performance offline direct stream archive conversion workstation engineered for system administrators, security researchers, and data engineers. Transcodes compressed archives directly across ZIP, 7Z, RAR, TAR.GZ, TAR.BZ2, and TAR.XZ formats with memory-bounded chunk streaming, AES-256 password preservation, granular compression level solvers (Store to Ultra), byte-level progress telemetry, multi-threaded 7z LZMA2 acceleration, and automated CRC32/SHA-256 checksum verification.",
+  "key_features": [
+    "Zero-Residual Memory Streaming Pipeline: Directly streams extracted file payload buffers into destination archives without writing uncompressed raw files to temporary storage or leaving disk traces",
+    "Universal Multi-Archive Transcoding Engine: Converts between ZIP, 7Z, RAR, TAR.GZ, TAR.BZ2, and TAR.XZ formats with directory hierarchy, timestamp preservation, and Unix file mode retention",
+    "AES-256 Encryption & Password Preservation: Integrated password prompt inspector supporting custom passphrases, encrypted archive header parsing, and AES-256 re-encryption during transcoding",
+    "Granular Compression Level & Dictionary Solver: Customizable compression strategies spanning Store (0), Fast (1-3), Standard (5), High (7), and Ultra (9) with LZMA2, Deflate, Bzip2, and Zstandard algorithm switches",
+    "Integrity Verification & Checksum Engine: Automated pre- and post-transcode payload sweeps validating file CRC32/SHA-256 checksums to guarantee zero corrupt file transfers",
+    "Asynchronous Byte-Throughput Telemetry: Streaming byte-by-byte extraction progress, MB/s throughput speed meters, dynamic ETA timers, and thread-safe queue updates to a reactive CustomTkinter GUI"
+  ],
+  "core_stack": {
+    "python_version": "3.10+",
+    "gui_framework": "CustomTkinter >= 5.2.0",
+    "drag_and_drop": "TkinterDnD2 / tkinterdnd2-universal",
+    "concurrency": "threading.Thread, queue.Queue, subprocess.Popen",
+    "packaging": "PyInstaller 6.0+ (Standalone .exe)",
+    "archive_engines": "py7zr >= 0.20.0, rarfile >= 4.0, zipfile, tarfile, zstandard >= 0.21.0 (Low-level archive streams)",
+    "cryptography": "cryptography >= 41.0.0 (AES-256 key derivation & header encryption verification)"
+  },
+  "design_system_and_theme": {
+    "theme_name": "Titanium Forge & Volt Amber",
+    "color_palette": {
+      "background_primary": "#0A0C10",
+      "background_secondary": "#121620",
+      "surface_card": "#1B202E",
+      "accent_primary": "#FFAB00",
+      "accent_secondary": "#00E5FF",
+      "accent_hover": "#D99200",
+      "text_primary": "#F0F4F8",
+      "text_secondary": "#8B96A5",
+      "danger_red": "#EF4444",
+      "warning_amber": "#F59E0B",
+      "success_emerald": "#10B981",
+      "border_color": "#273044"
+    },
+    "typography": {
+      "font_family": "Segoe UI, Inter, Cascadia Code, sans-serif",
+      "heading_size": 18,
+      "subheading_size": 14,
+      "body_size": 12,
+      "caption_size": 10
+    }
+  },
+  "system_architecture": {
+    "pattern": "Model-View-Controller (MVC) with Asynchronous Thread-Safe Event Queue",
+    "main_ui_thread": "CustomTkinter 60 FPS event loop managing batch archive queue, compression parameters sidebar, password entry dialog, and polling inter-thread events at 25 Hz (40ms interval)",
+    "worker_threads": "Background Python threads executing non-blocking stream & engine tasks",
+    "inter_thread_communication": "Thread-safe queue.Queue delivering atomic telemetry payloads: ('STATUS', archive_id, state), ('PROGRESS', uncompressed_bytes_processed, total_bytes, percent), ('THROUGHPUT', mb_per_sec, eta_sec), ('COMPLETE', output_path), ('ERROR', err_str)",
+    "process_safety": "Thread-safe event queue passing, clean process tree termination, and memory safety",
+    "ui_thread": "CustomTkinter main loop polling queue.Queue every 40ms for 60 FPS UI responsiveness"
+  },
+  "conversion_pipeline_optimization": {
+    "streaming_transcode_driver": "Read entry file streams directly from source archive handle (ZipFile.open / 7zFile.read) and pipe bytes into destination stream without intermediate disk writes",
+    "uncompressed_byte_telemetry": "Calculate overall batch progress against total uncompressed byte size extracted from archive central directory headers",
+    "unarchiver_binary_resolution": "Dynamic fallback resolver for 7z static binary execution or UnRAR binary paths if pure-Python modules encounter proprietary RAR v5 encrypted headers",
+    "checksum_validation_sweep": "Pre-verify source archive CRC32 checksums before initialization; verify destination payload hash post-transcode"
+  },
+  "binary_resolution_order": [
+    "sys._MEIPASS (PyInstaller frozen runtime root)",
+    "Application root directory / 'bin' subfolder",
+    "Local AppData / Program Files 7-Zip & WinRAR binaries (C:\\Program Files\\7-Zip\\7z.exe)",
+    "System environment PATH (shutil.which)",
+    "User interactive manual binary file selection dialog"
+  ],
+  "packaging_spec": {
+    "entry_point": "main.py",
+    "output_binary_name": "ArchiveFormatTranscoder.exe",
+    "bundle_mode": "onedir / standalone exe",
+    "icon_asset": "assets/icon.ico",
+    "datas": [
+      [
+        "assets/",
+        "assets"
+      ],
+      [
+        "bin/7z/",
+        "bin/7z"
+      ],
+      [
+        "styles/",
+        "styles"
+      ]
+    ],
+    "hidden_imports": [
+      "customtkinter",
+      "tkinterdnd2",
+      "PIL",
+      "queue",
+      "concurrent.futures"
+    ]
+  },
+  "ai_agent_prompt": "You are an elite Senior Desktop Systems & Data Compression Engineering Specialist tasked with implementing a production-grade native Windows desktop application titled 'Archive Transcoder Pro (ZIP / 7Z / RAR / TAR)'.\n\n### PROJECT OBJECTIVE:\nConstruct a zero-cloud, high-performance archive conversion workstation that transcodes compressed assets across ZIP, 7Z, RAR, TAR.GZ, TAR.BZ2, and TAR.XZ formats using memory-bounded streaming pipelines, AES-256 password preservation, custom compression level solvers (Store to Ultra), uncompressed byte-level progress telemetry, and thread-safe UI updates.\n\n### MANDATORY TECHNICAL REQUIREMENTS:\n1. DISTINCT UI & THEME (TITANIUM FORGE & VOLT AMBER):\n   - Implement a dark technical workspace using #0A0C10 (Primary Background), #121620 (Panels), #1B202E (Cards), #FFAB00 (Volt Amber Primary Accent), and #00E5FF (Electric Cyan Secondary Accent).\n   - Provide a responsive layout featuring a drag-and-drop archive queue, compression settings sidebar, password prompt inspector, throughput speed meter, and collapsible execution log.\n\n2. MULTI-FORMAT DIRECT STREAM TRANSCODING ENGINE:\n   - Convert archives directly across ZIP, 7Z, RAR, TAR.GZ, TAR.BZ2, and TAR.XZ formats.\n   - Leverage py7zr, rarfile, zipfile, and tarfile to pipe file payloads in memory without writing uncompressed residual files to disk.\n\n3. PASSWORD PRESERVATION & COMPRESSION LEVEL SOLVER:\n   - Build an interactive password inspector to input or transfer AES-256 passphrases.\n   - Support customizable compression levels (Store, Fast, Standard, High, Ultra) and algorithm selectors (LZMA2, Deflate, Bzip2, Zstandard).\n\n4. ASYNCHRONOUS TELEMETRY & BYTE CALCULATIONS:\n   - Offload archive extraction and re-packaging to background worker threads.\n   - Stream telemetry events, uncompressed byte progress, throughput metrics (MB/s), and ETA calculations to the main CustomTkinter GUI thread via queue.Queue polled at 25 Hz.\n\n5. RESILIENCE, BINARY RESOLUTION & PACKAGING:\n   - Implement path resolution for 7-Zip (7z.exe) and UnRAR binaries as fallbacks for RAR5 headers.\n   - Provide complete ArchiveTranscoderPro.spec for PyInstaller single-file packaging."
+}

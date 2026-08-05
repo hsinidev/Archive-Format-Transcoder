@@ -1,0 +1,24 @@
+{
+  "theme_name": "Titanium Forge & Volt Amber",
+  "color_palette": {
+    "background_primary": "#0A0C10",
+    "background_secondary": "#121620",
+    "surface_card": "#1B202E",
+    "accent_primary": "#FFAB00",
+    "accent_secondary": "#00E5FF",
+    "accent_hover": "#D99200",
+    "text_primary": "#F0F4F8",
+    "text_secondary": "#8B96A5",
+    "danger_red": "#EF4444",
+    "warning_amber": "#F59E0B",
+    "success_emerald": "#10B981",
+    "border_color": "#273044"
+  },
+  "typography": {
+    "font_family": "Segoe UI",
+    "heading_size": 18,
+    "subheading_size": 14,
+    "body_size": 12,
+    "caption_size": 10
+  }
+}
