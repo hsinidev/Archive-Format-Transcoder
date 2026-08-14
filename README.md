@@ -1,17 +1,21 @@
 <div align="center">
-# 🚀 Archive Format Transcoder
-### *Modern, High-Performance Python Solution & Developer Suite*
 
-<p align="center">
-  [![Architect](https://img.shields.io/badge/Architect-Hsini%20Mohamed-0055ff?style=for-the-badge&logo=github&logoColor=white)](https://hsini.dev)
-  [![Portfolio](https://img.shields.io/badge/Portfolio-hsini.dev-00c853?style=for-the-badge&logo=google-chrome&logoColor=white)](https://hsini.dev)
-  [![Language](https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge)](https://github.com/hsinidev)
-  [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-</p>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=180&section=header&text=Archive%20Format%20Transcode&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=38" width="100%" style="max-width: 100%; border-radius: 12px; margin-bottom: 20px;" alt="Archive Format Transcoder Header Banner" />
+
+  <h1>🚀 Archive Format Transcoder</h1>
+  <p><em>Modern, High-Performance Python Solution & Developer Suite</em></p>
+
+  <p align="center">
+    <a href="https://hsini.dev"><img src="https://img.shields.io/badge/Architect-Hsini%20Mohamed-0055ff?style=for-the-badge&logo=github&logoColor=white" alt="Architect: Hsini Mohamed" /></a>
+    <a href="https://hsini.dev"><img src="https://img.shields.io/badge/Portfolio-hsini.dev-00c853?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio: hsini.dev" /></a>
+    <a href="https://github.com/hsinidev"><img src="https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge" alt="Language: Python" /></a>
+    <a href="https://github.com/hsinidev/Archive-Format-Transcoder"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License: MIT" /></a>
+  </p>
 
 </div>
 
 ---
+
 ## 🌟 Executive Overview
 
 **Archive Format Transcoder** is a production-grade **Python** platform engineered for high reliability, clean architectural separation, and frictionless developer workflow.
@@ -24,76 +28,13 @@
 - **Production Ready**: Built-in error resilience, validation, and structured logging.
 
 ---
+
 ## 🏗️ Architecture & Technology Stack
 
 - **Primary Language**: `Python`
 - **Design Pattern**: Modular Clean Architecture / Domain-Driven Design
 - **License**: MIT Open Source Attribution
 
-## 📖 Deep-Dive Technical Documentation
-
-# Archive Format Transcoder
-
-
-> **Project ID**: `010`  
-> **Repository**: [https://github.com/hsinidev/Archive-Format-Transcoder](https://github.com/hsinidev/Archive-Format-Transcoder)
-
----
-
-## 📌 Description
-Archive Format Transcoder converts compressed archive files across formats (ZIP, TAR, GZ, 7Z, RAR) without needing manual extraction to disk.
-
----
-
-## ✨ Features
-- Direct stream archive conversion (e.g. RAR to ZIP, 7Z to TAR.GZ)
-- Compression level selection (Store, Fast, Maximum, Ultra)
-- Password protection migration and AES-256 encryption re-wrapping
-- Archive integrity check and checksum generation (SHA-256, MD5)
-- Selective file filtering during cross-archive transcoding
-
----
-
-## 🛠️ Tech Stack & Architecture
-- **Language / Framework**: Python 3.10+ / Qt (PySide6 / PyQt)
-- **Core Modules**: Modular engine architecture, async event dispatching, decoupled utility functions
-- **Target OS**: Windows, macOS, Linux
-
----
-
-## 🚀 Quick Start & Installation
-
-### Prerequisites
-- **Python**: Version 3.10 or higher installed
-- **Git**: Installed for cloning repositories
-
-### Setup Instructions
-```bash
-# 1. Clone the repository
-git clone https://github.com/hsinidev/Archive-Format-Transcoder.git
-
-# 2. Navigate to project directory
-cd Archive-Format-Transcoder
-
-# 3. Install required dependencies
-pip install -r requirements.txt
-
-# 4. Launch the Application
-python app.py
-```
-*(Note: If `app.py` is absent, launch with `python main.py`)*
-
----
-
-
-- **Website**: [https://hsini.dev](https://hsini.dev)
-- **Email**: [contact@hsini.dev](mailto:contact@hsini.dev)
-- **GitHub Profile**: [https://github.com/hsinidev](https://github.com/hsinidev)
-- **Project Repo**: [https://github.com/hsinidev/Archive-Format-Transcoder](https://github.com/hsinidev/Archive-Format-Transcoder)
-
----
-
----
 ## 🚀 Quick Start & Installation
 
 ### 1. Clone the Repository
